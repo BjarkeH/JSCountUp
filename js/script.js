@@ -1,8 +1,3 @@
-var elementsList = document.querySelectorAll(".counter-demo");
-
-
-
-
 /** isInViewPort()
  * @argument Html Node
  * @returns bool
@@ -19,22 +14,8 @@ function isInViewPort(elem){
 
 }
 
-/** onVisibilityChange
- * @argument Html node + callback()
-*/
-function onVisibilityChange(elem, callback){
-  var old_visible;
-  return function(){
-    var visible = isInViewPort(elem);
-    if(visible != old_visible) {
-      if(typeof callback == 'function') {
-        callback();
-      }
-    }
-  }
-}
 
-
+var elementsList = document.querySelectorAll(".counter-demo");
 
 window.addEventListener("scroll", function(){
   for (let i = 0; i < elementsList.length; i++) {
@@ -55,14 +36,4 @@ window.addEventListener("scroll", function(){
 
   }
 });
-
-
-// window.addEventListener("scroll", function(){
-//   for (let i = 0; i < elementsList.length; i++) {
-//     var element = elementsList[i];
-//     if(isInViewPort(element)){
-//       console.log(element.dataset.countEnd);
-//     }
-//   }
-// });
 

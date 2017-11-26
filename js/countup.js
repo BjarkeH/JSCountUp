@@ -1,5 +1,10 @@
 /** countAnimation()
- * @argument Html node
+ * @param HTMLNode
+ * @param int start
+ * @param int end
+ * @param int duration
+ * @param bool separator
+ * @param string suffix
  * @author BHA
 */
 
@@ -12,11 +17,9 @@ function countAnimation(elem, start, end, duration, separator, suffix){
   if(!suffix){
     suffix = "";
   }
-
   if(!separator){
     separator = "";
   }
-
   var range = end - start;
   // Timer should not be less than 50ms 
   var minTimer = 50;
@@ -36,12 +39,13 @@ function countAnimation(elem, start, end, duration, separator, suffix){
     var value = Math.round(end - (remaining * range));
     if(separator == "true"){
       value = value.toLocaleString();
-      value = value.replace(",",".");
+      value = value.replace(/,/g,".");
       value = value + suffix;
     }
     elem.innerHTML = value;
     if(value == end){
       clearInterval(timer);
+      
     }
   }
 
