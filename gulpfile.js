@@ -6,7 +6,8 @@ gulp.task("serve", ()=> {
   connect.server({
     port: 80,
     root: './../JsCounter/',
-    livereload: true
+    livereload: true,
+    https: true
   });
 });
 
