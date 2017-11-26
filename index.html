@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JsCounter Demo</title>
+  <style>
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0px 30px;
+    }
+
+    .has-image {
+      background-image: url("https://cdn.shopify.com/s/files/1/0917/2566/products/the-knockout-high-neck-bikini-1.jpg?v=1511295795");
+      background-position: center;
+      background-size: cover;
+      width: 500px;
+    }
+
+    .block {
+      width: 500px;
+      height: 200px;
+      /* background: gray; */
+      margin-bottom: 20px;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 45px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .overlay {
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+
+    .page-divider {
+      height: 2000px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="page-divider"></div>
+    <div class="has-image">
+      <div class="overlay">
+        <div class="counter-demo block" data-count-start="200000" data-count-end="350000" data-count-executed="false" data-count-duration="1200" data-count-separator="true"></div>
+      </div>
+    </div>
+    <div class="page-divider"></div>
+    <div class="has-image" style="background-image: url('http://thearenafitness.com/wp-content/uploads/2017/02/Overeat-Greasy-Foods.jpg')">
+      <div class="overlay">
+        <div class="counter-demo block" data-count-start="00000" data-count-end="25000" data-count-executed="false" data-count-duration="800" data-count-separator="true" data-count-suffix="?"></div>
+      </div>
+    </div>
+    <div class="page-divider"></div>
+    <div class="has-image" style="background-image: url('https://media1.popsugar-assets.com/files/thumbor/9T2OECKcBKLIkdVpONi4ldQsZic/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2013/03/11/1/192/1922398/5afd7f7d8c94cbdf_FFN_Heatherton_Erin_TRB_020113_51004602/i/February-2015-Erin-Heatherton-modeled-bikini-during.jpg')">
+      <div class="overlay">
+        <div class="counter-demo blockb" data-count-start="0" data-count-end="100" data-count-executed="false" data-count-duration="1000" data-count-separator="true" data-count-suffix="%"></div>
+      </div>
+    </div>
+    <div class="page-divider"></div>
+  </div>
+  <script src="./js/countup.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>
