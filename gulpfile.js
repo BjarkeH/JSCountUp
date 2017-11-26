@@ -4,6 +4,7 @@ const connect = require('gulp-connect');
 
 gulp.task("serve", ()=> {
   connect.server({
+    port: 80,
     root: './../JsCounter/',
     livereload: true
   });
